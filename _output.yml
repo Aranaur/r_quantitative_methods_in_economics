@@ -2,7 +2,7 @@ bookdown::bs4_book:
   css: style.css
   theme:
     primary: "#09724a"
-  repo: https://github.com/aranaur/r_forecasting
+  repo: https://github.com/aranaur/r_quantitative_methods_in_economics
 
 bookdown::word_document2:
   toc: TRUE
