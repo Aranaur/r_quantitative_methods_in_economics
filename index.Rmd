@@ -1,14 +1,14 @@
 --- 
-title: "<span style='font-size: 14px'>ОСНОВИ ПРОГНОЗУВАННЯ В R</style>"
+title: "<span style='font-size: 14px'>Кількісні методи в економіці (в R)</style>"
 author: "Ігор Мірошниченко"
 date: "`r Sys.Date()`"
 documentclass: book
 bibliography: book.bib
 biblio-style: apalike
 link-citations: yes
-description: "Підручик з основ прогнозування часових рядів з використанням мови програмування R"
+description: "Підручик 'Кількісні методи в економіці' з використанням мови програмування R"
 ---
-# Основи прогнозування в R {.unnumbered}
+# Кількісні методи в економіці {.unnumbered}
 
 ## Передмова {.unnumbered}
 
