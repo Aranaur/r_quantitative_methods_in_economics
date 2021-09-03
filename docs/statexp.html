@@ -4,16 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title> 7 Експоненціальне згладжування | r_quantitative_methods_in_economics.knit</title>
+<title> 3 Статистичні експеременти | r_quantitative_methods_in_economics.knit</title>
 <meta name="author" content="Ігор Мірошниченко">
-<meta name="description" content="text">
+<meta name="description" content="Підручик ‘Кількісні методи в економіці’ з використанням мови програмування R">
 <meta name="generator" content="bookdown 0.24.1 with bs4_book()">
-<meta property="og:title" content=" 7 Експоненціальне згладжування | r_quantitative_methods_in_economics.knit">
+<meta property="og:title" content=" 3 Статистичні експеременти | r_quantitative_methods_in_economics.knit">
 <meta property="og:type" content="book">
-<meta property="og:description" content="text">
+<meta property="og:description" content="Підручик ‘Кількісні методи в економіці’ з використанням мови програмування R">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=" 7 Експоненціальне згладжування | r_quantitative_methods_in_economics.knit">
-<meta name="twitter:description" content="text">
+<meta name="twitter:title" content=" 3 Статистичні експеременти | r_quantitative_methods_in_economics.knit">
+<meta name="twitter:description" content="Підручик ‘Кількісні методи в економіці’ з використанням мови програмування R">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.10/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.5.9002/transition.js"></script><script src="libs/bs3compat-0.2.5.9002/tabs.js"></script><script src="libs/bs3compat-0.2.5.9002/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -38,45 +38,40 @@
         <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
 </form>
 
-      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+      <nav aria-label="Table of contents"><h2>Зміст</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Кількісні методи в економіці</a></li>
-<li><a class="" href="introR.html"><span class="header-section-number">1</span> Вступ до R</a></li>
-<li><a class="" href="graphics.html"><span class="header-section-number">2</span> Візуалізація часових рядів</a></li>
-<li><a class="" href="decomposition.html"><span class="header-section-number">3</span> Декомпозиція часових рядів</a></li>
-<li><a class="" href="features.html"><span class="header-section-number">4</span> Аналіз часового ряду</a></li>
-<li><a class="" href="toolbox.html"><span class="header-section-number">5</span> Інструментарій прогнозування</a></li>
-<li><a class="" href="regression.html"><span class="header-section-number">6</span> Регресійні моделі</a></li>
-<li><a class="active" href="expsmooth.html"><span class="header-section-number">7</span> Експоненціальне згладжування</a></li>
-<li><a class="" href="arima.html"><span class="header-section-number">8</span> ARIMA-моделі</a></li>
-<li><a class="" href="prophet.html"><span class="header-section-number">9</span> Prophet Facebook</a></li>
-<li><a class="" href="clustering.html"><span class="header-section-number">10</span> Кластеризація</a></li>
+<li><a class="" href="EDA.html"><span class="header-section-number">1</span> Розвідувальний аналіз даних</a></li>
+<li><a class="" href="dist.html"><span class="header-section-number">2</span> Розподіл даних</a></li>
+<li><a class="active" href="statexp.html"><span class="header-section-number">3</span> Статистичні експеременти</a></li>
+<li><a class="" href="reg.html"><span class="header-section-number">4</span> Регресія</a></li>
+<li><a class="" href="class.html"><span class="header-section-number">5</span> Класифікація</a></li>
+<li><a class="" href="clust.html"><span class="header-section-number">6</span> Кластеризація</a></li>
 <li><a class="" href="references.html">Література</a></li>
 </ul>
 
         <div class="book-extra">
-          <p><a id="book-repo" href="https://github.com/aranaur/r_quantitative_methods_in_economics">View book source <i class="fab fa-github"></i></a></p>
+          <p><a id="book-repo" href="https://github.com/aranaur/r_quantitative_methods_in_economics">Переглянути код <i class="fab fa-github"></i></a></p>
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="expsmooth" class="section level1" number="7">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="statexp" class="section level1" number="3">
 <h1>
-<span class="header-section-number"> 7</span> Експоненціальне згладжування<a class="anchor" aria-label="anchor" href="#expsmooth"><i class="fas fa-link"></i></a>
+<span class="header-section-number"> 3</span> Статистичні експеременти<a class="anchor" aria-label="anchor" href="#statexp"><i class="fas fa-link"></i></a>
 </h1>
-<p>text</p>
 
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="regression.html"><span class="header-section-number">6</span> Регресійні моделі</a></div>
-<div class="next"><a href="arima.html"><span class="header-section-number">8</span> ARIMA-моделі</a></div>
+<div class="prev"><a href="dist.html"><span class="header-section-number">2</span> Розподіл даних</a></div>
+<div class="next"><a href="reg.html"><span class="header-section-number">4</span> Регресія</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
-    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#expsmooth"><span class="header-section-number">7</span> Експоненціальне згладжування</a></li></ul>
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>На цій сторінці</h2>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#statexp"><span class="header-section-number">3</span> Статистичні експеременти</a></li></ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/aranaur/r_quantitative_methods_in_economics/blob/master/07-expsmooth.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/aranaur/r_quantitative_methods_in_economics/edit/master/07-expsmooth.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/aranaur/r_quantitative_methods_in_economics/blob/master/03-statexp.Rmd">Переглянути код <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/aranaur/r_quantitative_methods_in_economics/edit/master/03-statexp.Rmd">Редагувати <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -89,11 +84,11 @@
 
   <div class="col-12 col-md-6 mt-3">
     <p>"<strong><span style="font-size: 14px">Кількісні методи в економіці
-</span></strong>" was written by Ігор Мірошниченко. It was last built on 2021-09-03.</p>
+</span></strong>" написано Ігор Мірошниченко. <br>Останні зміни 2021-09-03.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
-    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+    <p>Книгу створено за допомогою пакету <a class="text-light" href="https://bookdown.org">bookdown</a>.</p>
   </div>
 
 </div></div>
