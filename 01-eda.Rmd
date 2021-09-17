@@ -3,13 +3,35 @@
 ```{r echo = FALSE, purl = FALSE, cache = FALSE, include=FALSE}
 knitr::opts_knit$set(global.par = TRUE)
 knitr::opts_chunk$set(warning = FALSE, message = FALSE, collapse = TRUE, out.width = '100%')
+library(gapminder)
+library(tidyverse)
 ```
 
-## Типи даних
+## Типи даних {#data_types}
 ***
 
-## Міри центральної тенденції
+## Міри центральної тенденції {#cent_tend}
 ***
+Міри центральної тенденції --- це число для опису центру розподілу.
+
+### Середнє арифметичне {#mean}
+Найпоширеніша міра центральних тенденцій - арифметичне середнє, cума всіх значень, що поділено на їх кількість.
+$$\overline{x}=\frac{\sum_{i}^{n}x_i}{n}$$
+Для його розрахунку в R використовується функція `mean`.
+
+Для прикладу візьмемо датасет з пакету `gapminder::gapminder`
+```{r echo=FALSE}
+gapminder %>% 
+  slice(1:10) %>% 
+  knitr::kable(caption = "Перші 10 з датасету gapminder")
+```
+Розрахуємо середнє значення для всіх числових змінних
+```{r}
+gapminder %>% 
+  summarise_if(is.numeric, mean, na.rm = TRUE)
+```
+
+
 
 ## Міри мінливості
 ***
