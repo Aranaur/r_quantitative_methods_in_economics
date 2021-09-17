@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title> 1 Розвідувальний аналіз даних | Кількісні методи в економіці</title>
 <meta name="author" content="Ігор Мірошниченко">
-<meta name="description" content="1.1 Типи даних   1.2 Міри центральної тенденції Міри центральної тенденції — це число для опису центру розподілу.  1.2.1 Середнє арифметичне Найпоширеніша міра центральних тенденцій - арифметичне...">
+<meta name="description" content="1.1 Типи даних   1.2 Міри центральної тенденції Міри центральної тенденції — це число для опису центру розподілу.  1.2.1 Середнє  Cереднє арифметичне — cума всіх значень, що поділена на їх...">
 <meta name="generator" content="bookdown 0.24.1 with bs4_book()">
 <meta property="og:title" content=" 1 Розвідувальний аналіз даних | Кількісні методи в економіці">
 <meta property="og:type" content="book">
-<meta property="og:description" content="1.1 Типи даних   1.2 Міри центральної тенденції Міри центральної тенденції — це число для опису центру розподілу.  1.2.1 Середнє арифметичне Найпоширеніша міра центральних тенденцій - арифметичне...">
+<meta property="og:description" content="1.1 Типи даних   1.2 Міри центральної тенденції Міри центральної тенденції — це число для опису центру розподілу.  1.2.1 Середнє  Cереднє арифметичне — cума всіх значень, що поділена на їх...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" 1 Розвідувальний аналіз даних | Кількісні методи в економіці">
-<meta name="twitter:description" content="1.1 Типи даних   1.2 Міри центральної тенденції Міри центральної тенденції — це число для опису центру розподілу.  1.2.1 Середнє арифметичне Найпоширеніша міра центральних тенденцій - арифметичне...">
+<meta name="twitter:description" content="1.1 Типи даних   1.2 Міри центральної тенденції Міри центральної тенденції — це число для опису центру розподілу.  1.2.1 Середнє  Cереднє арифметичне — cума всіх значень, що поділена на їх...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.10/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.5.9002/transition.js"></script><script src="libs/bs3compat-0.2.5.9002/tabs.js"></script><script src="libs/bs3compat-0.2.5.9002/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -71,17 +71,22 @@
 </h2>
 <hr>
 <p>Міри центральної тенденції — це число для опису центру розподілу.</p>
-<div id="mean" class="section level3" number="1.2.1">
+<div id="means" class="section level3" number="1.2.1">
 <h3>
-<span class="header-section-number">1.2.1</span> Середнє арифметичне<a class="anchor" aria-label="anchor" href="#mean"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.2.1</span> Середнє<a class="anchor" aria-label="anchor" href="#means"><i class="fas fa-link"></i></a>
 </h3>
-<p>Найпоширеніша міра центральних тенденцій - арифметичне середнє, cума всіх значень, що поділено на їх кількість.
-<span class="math display">\[\overline{x}=\frac{\sum_{i}^{n}x_i}{n}\]</span>
-Для його розрахунку в R використовується функція <code>mean</code>.</p>
-<p>Для прикладу візьмемо датасет з пакету <code><a href="https://rdrr.io/pkg/gapminder/man/gapminder.html">gapminder::gapminder</a></code></p>
+<ul>
+<li>
+<strong>Cереднє арифметичне</strong> — cума всіх значень, що поділена на їх кількість <a href="EDA.html#eq:mean">(1.1)</a>.
+<span class="math display" id="eq:mean">\[\begin{equation}
+\overline{x}=\frac{\sum\limits_{i}^{n}x_i}{n} \tag{1.1}
+\end{equation}\]</span>
+Для його розрахунку в R використовується функція <code>mean</code>.</li>
+</ul>
+<p>Для прикладу візьмемо датасет з пакету <code><a href="https://rdrr.io/pkg/gapminder/man/gapminder.html">gapminder::gapminder</a></code> (див. таб. <a href="EDA.html#tab:gapminder">1.1</a>)</p>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:unnamed-chunk-2">Таблиця 1.1: </span>Перші 10 з датасету gapminder</caption>
+<span id="tab:gapminder">Таблиця 1.1: </span>Перші шість значень датасету gapminder</caption>
 <thead><tr class="header">
 <th align="left">country</th>
 <th align="left">continent</th>
@@ -139,48 +144,30 @@
 <td align="right">14880372</td>
 <td align="right">786.1134</td>
 </tr>
-<tr class="odd">
-<td align="left">Afghanistan</td>
-<td align="left">Asia</td>
-<td align="right">1982</td>
-<td align="right">39.854</td>
-<td align="right">12881816</td>
-<td align="right">978.0114</td>
-</tr>
-<tr class="even">
-<td align="left">Afghanistan</td>
-<td align="left">Asia</td>
-<td align="right">1987</td>
-<td align="right">40.822</td>
-<td align="right">13867957</td>
-<td align="right">852.3959</td>
-</tr>
-<tr class="odd">
-<td align="left">Afghanistan</td>
-<td align="left">Asia</td>
-<td align="right">1992</td>
-<td align="right">41.674</td>
-<td align="right">16317921</td>
-<td align="right">649.3414</td>
-</tr>
-<tr class="even">
-<td align="left">Afghanistan</td>
-<td align="left">Asia</td>
-<td align="right">1997</td>
-<td align="right">41.763</td>
-<td align="right">22227415</td>
-<td align="right">635.3414</td>
-</tr>
 </tbody>
 </table></div>
-<p>Розрахуємо середнє значення для всіх числових змінних</p>
+<p>Розрахуємо середнє значення для показника <em>“ВВП на душу населення”</em></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">gapminder</span> <span class="op">%&gt;%</span> 
-  <span class="fu">summarise_if</span><span class="op">(</span><span class="va">is.numeric</span>, <span class="va">mean</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="co">## # A tibble: 1 x 4</span>
-<span class="co">##    year lifeExp       pop gdpPercap</span>
-<span class="co">##   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;</span>
-<span class="co">## 1 1980.    59.5 29601212.     7215.</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">gapminder</span><span class="op">$</span><span class="va">gdpPercap</span><span class="op">)</span>
+<span class="co">## [1] 7215.327</span></code></pre></div>
+<p>Але на цьому історія з середнім не закінчується. Існує ще декілька розновидів середнього.</p>
+<ul>
+<li>
+<strong>Усічене середнє</strong> – це метод усереднення, який видаляє невеликий відсоток від найбільшого та найменшого значення перед обчисленням середнього значення.</li>
+</ul>
+<p>Впорядковуємо дані <span class="math inline">\(x_{(1)}, x_{(2)},...,x_{(n)}\)</span>, де <span class="math inline">\(x_{(1)}\)</span> — нейменше значення, а <span class="math inline">\(x_{(n)}\)</span> — найбільше. Тоді формула для розрахунку усіченого середнього з відкиданням <span class="math inline">\(p\)</span> найменших та найбільших значень:
+<span class="math display" id="eq:trim-mean">\[\begin{equation}
+\overline{x} = \frac{\sum\limits_{i=p+1}^{n-p}x_i}{n-2p} \tag{1.2}
+\end{equation}\]</span></p>
+</div>
+<div id="median" class="section level3" number="1.2.2">
+<h3>
+<span class="header-section-number">1.2.2</span> Медіана<a class="anchor" aria-label="anchor" href="#median"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>
+<strong>Медіана</strong> — це середня величина, яка відокремлює вищу половину від нижньої в наборі даних.</li>
+</ul>
 </div>
 </div>
 <div id="міри-мінливості" class="section level2" number="1.3">
@@ -217,7 +204,10 @@
 <li><a class="nav-link" href="#EDA"><span class="header-section-number">1</span> Розвідувальний аналіз даних</a></li>
 <li><a class="nav-link" href="#data_types"><span class="header-section-number">1.1</span> Типи даних</a></li>
 <li>
-<a class="nav-link" href="#cent_tend"><span class="header-section-number">1.2</span> Міри центральної тенденції</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#mean"><span class="header-section-number">1.2.1</span> Середнє арифметичне</a></li></ul>
+<a class="nav-link" href="#cent_tend"><span class="header-section-number">1.2</span> Міри центральної тенденції</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#means"><span class="header-section-number">1.2.1</span> Середнє</a></li>
+<li><a class="nav-link" href="#median"><span class="header-section-number">1.2.2</span> Медіана</a></li>
+</ul>
 </li>
 <li><a class="nav-link" href="#%D0%BC%D1%96%D1%80%D0%B8-%D0%BC%D1%96%D0%BD%D0%BB%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D1%96"><span class="header-section-number">1.3</span> Міри мінливості</a></li>
 <li><a class="nav-link" href="#%D0%B4%D0%BE%D1%81%D0%BB%D1%96%D0%B4%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F-%D1%80%D0%BE%D0%B7%D0%BF%D0%BE%D0%B4%D1%96%D0%BB%D1%83-%D0%B4%D0%B0%D0%BD%D0%B8%D1%85"><span class="header-section-number">1.4</span> Дослідження розподілу даних</a></li>
@@ -240,7 +230,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Кількісні методи в економіці</strong>", автор Ігор Мірошниченко. <br>Останні зміни: 2021-09-17.</p>
+    <p>"<strong>Кількісні методи в економіці</strong>", автор Ігор Мірошниченко. <br>Останні зміни: 2021-09-18.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

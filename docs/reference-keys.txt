@@ -1,8 +1,11 @@
-tab:unnamed-chunk-2
+eq:mean
+tab:gapminder
+eq:trim-mean
 EDA
 data_types
 cent_tend
-mean
+means
+median
 міри-мінливості
 дослідження-розподілу-даних
 центральна-гранична-теорема
