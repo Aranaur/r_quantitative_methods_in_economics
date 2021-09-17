@@ -1,5 +1,5 @@
 --- 
-title: "<span style='font-size: 16px'>Кількісні методи в економіці</style>"
+title: Кількісні методи в економіці
 author: "Ігор Мірошниченко"
 date: "`r Sys.Date()`"
 documentclass: book
@@ -9,6 +9,10 @@ link-citations: yes
 description: "Підручик 'Кількісні методи в економіці' з використанням мови програмування R"
 ---
 # Кількісні методи в економіці {.unnumbered}
+
+*Ігор Мірошниченко*
+
+*`r Sys.Date()`*
 
 ## Передмова {.unnumbered}
 
